@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+public class DifferenceArraysVsArrayLists {
+
+    public static void main(String[] args) {
+        // Example with Arrays
+        int[] array = new int[5]; // Fixed size array
+        array[0] = 1;
+        array[1] = 2;
+        array[2] = 3;
+        array[3] = 4;
+        array[4] = 5;
+        // Accessing array elements
+        System.out.println("Array elements:");
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Element at index " + i + ": " + array[i]);
+        }
+
+        // Example with ArrayLists
+        ArrayList<Integer> arrayList = new ArrayList<>(); // Dynamic size
+        arrayList.add(1); // Adding elements
+        arrayList.add(2);
+        arrayList.add(3);
+        arrayList.add(4);
+        arrayList.add(5);
+        // Accessing ArrayList elements
+        System.out.println("ArrayList elements:");
+        for (int i = 0; i < arrayList.size(); i++) {
+            System.out.println("Element at index " + i + ": " + arrayList.get(i));
+        }
+
+        // Demonstrating dynamic resizing in ArrayList
+        arrayList.add(6);
+        System.out.println("Added another element to ArrayList. New size: " + arrayList.size());
+
+        // Trying to resize array is not possible, this line will cause an error
+        // array[5] = 6; // Running this line will throw ArrayIndexOutOfBoundsException
+    }
+}
